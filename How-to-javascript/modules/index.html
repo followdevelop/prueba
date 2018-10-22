@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function showDetails(animal) {
+            var animalType = animal.getAttribute("data-animal-type");
+            alert("The " + animal.innerHTML + " is a " + animalType + ".");
+        }
+        </script>
+    <title>modulo javascript</title>
+</head>
+<body>
+    <script src=”main.js” language=”Javascript”></script>
+    <h1>tituloGrande</h1>
+
+    <ul>
+        <li onclick="showDetails(this)" id="owl" data-animal-type="bird">Owl</li>
+        <li onclick="showDetails(this)" id="salmon" data-animal-type="fish">Salmon</li>  
+        <li onclick="showDetails(this)" id="tarantula" data-animal-type="spider">Tarantula</li>  
+      </ul>
+      
+      <p dir="rtl">Write this text right-to-left!</p>
+<a href="https://www.w3schools.com" This is a link></a>
+</body>
+</html>

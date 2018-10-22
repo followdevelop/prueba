@@ -1,0 +1,47 @@
+Atributos
+    id = "texto"
+    class = "texto"
+    style = "texto"
+
+    contenteditable="true"
+    data:  <li onclick="showDetails(this)" id="owl" data-animal-type="bird">Owl</li>
+
+<a href="https://www.w3schools.com">This is a link</a>
+<img src="img_girl.jpg">                                                    la fuente de la imagen con src .. imagen definida con img
+<img src="img_girl.jpg" width="500" height="600">                           atributos de tamaño
+<img src="img_girl.jpg" alt="Girl with a jacket" width="500" height="600">  para describir el contenido
+<p style="color:red">I am a paragraph</p>                                   element, like color, font, size etc.
+The language of the document can be declared in the <html> tag.
+<p title="I'm a tooltip">This is a paragraph.</p>                           informacion cuando pase el mouse
+Sugerimos: Citar valores de atributo ""
+quotes inside <p title="John 'ShotGun' Nelson">
+
+Attribute	Description
+alt     	Specifies an alternative text for an image, when the image cannot be displayed
+disabled	Specifies that an input element should be disabled
+href    	Specifies the URL (web address) for a link
+id	        Specifies a unique id for an element
+src	        Specifies the URL (web address) for an image
+style	    Specifies an inline CSS style for an element
+title	    Specifies extra information about an element (displayed as a tool tip)
+https://www.w3schools.com/tags/ref_attributes.asp
+
+etiquetas
+<hr>        break, element is used to separate content (or define a change) , linea horizontal
+<head>      element is a container for metadata ... entre html y body
+<!--This is a comment. Comments are not displayed in the browser--> comentario
+ 
+
+
+
+acces key
+tab
+etiqueta atributo
+form ..  name="formulario"
+document.form
+document.formulario
+name="formulario"
+
+
+CSS
+font-size:60px;
