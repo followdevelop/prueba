@@ -1,0 +1,65 @@
+mysql
+8.0.12
+docker run -v /home/ruta:/var/lib/mysql
+-p 3306:3306
+--name mysqlversion
+-e MYSQL_ROOT_PASSWORD=secret
+-d mysql:version
+--character-set-server=utf8
+--collation-server=utf8_unicode-cli
+
+docker exec -it mysqlversion mysql -uroot -p
+
+
+
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+docker exec -it some-mysql bash
+
+docker run --name some-mysql -v 
+/my/custom:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+
+
+postgres
+10-alpine
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+EXPOSE 5432
+
+
+odoo
+12.0
+docker run -d -e POSTGRES_USER=odoo 
+-e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10
+
+docker run -p 8069:8069 --name odoo --link db:db -t odoo
+
+
+
+httpd
+2.4.35-alpine
+docker run -dit --name my-running-app -p 8080:80 my-apache2
+docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
+
+
+
+node
+8.12.0-alpine
+docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app 
+-w /usr/src/app node:8 node your-daemon-or-script.js
+
+EXPOSE 8888
+docker run -it --rm --name prueba -v $(pwd):/usr/src/app 
+-w /usr/src/app node:10.11.0-alpine node TimeExcecutionReduce.js
+
+
+php
+7.3.0RC3-cli-alpine3.8
+docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp 
+-w /usr/src/myapp php:7.2-cli php your-script.php
+
+docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.2-apache
+
+
+
+github.com/followdevelop/prueba
+followdevelop
+A1B2c3d4E5F6g7h8
